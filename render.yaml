@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: Youtube_Transcript   # Change this to the name of your app
+    env: python
+    plan: free               # Use 'free' plan, or 'starter' for upgraded
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "streamlit run app.py"
+    envVars:
+      - key: STREAMLIT_SERVER_PORT
+        value: 8080
